@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan & Secure Your Premium Escape | Andaman Luxury Travel</title>
+    <meta name="description" content="Fill out preferred travel dates and package configurations. Our local concierge managers process inquiries within 30 minutes delivering direct tailored confirmations.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="subpage-body">
+
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="loader-content">
+            <div class="waves-loader"></div>
+            <span class="loader-text">Loading Paradise...</span>
+        </div>
+    </div>
+
+    <!-- Floating Action Buttons -->
+    <a href="https://wa.me/919933216863" target="_blank" class="floating-btn whatsapp-btn" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <button id="backToTop" class="floating-btn back-top-btn" aria-label="Scroll back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Transparent Sticky Navbar -->
+    <header class="navbar navbar-subpage scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">
+                    <img src="logo.jpeg" alt="Logo" class="custom-logo">
+                </span>
+            </a>
+            
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="islands.html" class="nav-link">Islands</a>
+                <a href="beaches.html" class="nav-link">Beaches</a>
+                <a href="activities.html" class="nav-link">Activities</a>
+                <a href="history.html" class="nav-link">History</a>
+                <a href="packages.html" class="nav-link">Packages</a>
+                <a href="honeymoon.html" class="nav-link">Honeymoon</a>
+                <a href="tours.html" class="nav-link">Tours</a>
+                <a href="cabs.html" class="nav-link">Cab Rentals</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="booking.html" class="nav-link btn-nav active">Plan Trip</a>
+            </nav>
+
+            <div class="nav-actions">
+               
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- BOOKING SECTION -->
+    <section id="booking" class="booking-section py-section bg-gradient-subtle">
+        <div class="section-container">
+            <div class="booking-grid">
+                <div class="booking-left reveal-left">
+                    <span class="subtitle-pill border-dark">Instant Gateway</span>
+                    <h2>Plan & Secure Your <span class="gradient-text">Premium Escape</span></h2>
+                    <p>Fill out preferred travel dates and package configurations. Our local concierge managers process inquiries within 30 minutes delivering direct tailored confirmations.</p>
+                    
+                    <div class="booking-perks">
+                        <div class="perk-item">
+                            <i class="fas fa-shield-alt text-blue"></i>
+                            <div class="perk-info">
+                                <strong>No Hidden Surcharges</strong>
+                                <span>Clear itinerary guidance provided</span>
+                            </div>
+                        </div>
+                        <div class="perk-item">
+                            <i class="fas fa-headset text-orange"></i>
+                            <div class="perk-info">
+                                <strong>24/7 Island Concierge Support</strong>
+                                <span>Assigned single-point native guide contact</span>
+                            </div>
+                        </div>
+                        <div class="perk-item">
+                            <i class="fas fa-undo-alt text-sand"></i>
+                            <div class="perk-info">
+                                <strong>Flexible Rescheduling Policy</strong>
+                                <span>Stress-free weather adaptation coverage</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modern Booking Form Glassmorphism design -->
+                <div class="booking-right glassmorphism-premium reveal-right">
+                    <form id="tripBookingForm" class="booking-form">
+                        <div class="form-header">
+                            <h3><i class="fas fa-concierge-bell"></i> Secure Reservation</h3>
+                            <p>Submit customized specs below</p>
+                        </div>
+
+                        <div class="input-field-group">
+                            <label for="bookName"><i class="fas fa-user"></i> Full Name *</label>
+                            <input type="text" id="bookName" placeholder="Enter your full name" required>
+                        </div>
+
+                        <div class="input-field-group">
+                            <label for="bookEmail"><i class="fas fa-envelope"></i> Email Address *</label>
+                            <input type="email" id="bookEmail" placeholder="name@domain.com" required>
+                        </div>
+
+                        <div class="form-row-2">
+                            <div class="input-field-group">
+                                <label for="bookPhone"><i class="fas fa-phone-alt"></i> Mobile / WhatsApp *</label>
+                                <input type="tel" id="bookPhone" placeholder="+91 XXXXX XXXXX" required>
+                            </div>
+                            <div class="input-field-group">
+                                <label for="bookDate"><i class="fas fa-calendar-day"></i> Travel Start Date *</label>
+                                <input type="date" id="bookDate" required>
+                            </div>
+                        </div>
+
+                        <div class="input-field-group">
+                            <label for="bookDest"><i class="fas fa-map-marked-alt"></i> Primary Focal Destination</label>
+                            <select id="bookDest" class="custom-select">
+                                <option value="all">Comprehensive Andaman Showcase</option>
+                                <option value="havelock">Havelock & Neil Exclusively</option>
+                                <option value="honeymoon">Premium Sunset Honeymoon Itinerary</option>
+                                <option value="adventure">Adrenaline Scuba & Watersports Focus</option>
+                                <option value="north">Baratang / Diglipur Wilderness Excursion</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field-group">
+                            <label for="bookPackage"><i class="fas fa-box-open"></i> Select Desired Tier *</label>
+                            <select id="bookPackage" class="custom-select" required>
+                                <option value="45999" selected>Andaman Wonders Tour Package (5N/6D)</option>
+                                <option value="24999">Classic Island Discovery</option>
+                                <option value="54999">Havelock Romantic Bliss Bundle</option>
+                                <option value="79999">Exotic Platinum VIP Fleet Special</option>
+                                <option value="35000">Deep Sea Adventure Dive Pro Set</option>
+                            </select>
+                        </div>
+
+                        <!-- Addon inclusion option tied to feature list -->
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="chkIncludeCab" value="yes">
+                            <label for="chkIncludeCab">Include cab vehicle preference in primary itinerary enquiry</label>
+                        </div>
+
+                        <div class="input-field-group">
+                            <label for="bookNotes"><i class="fas fa-comment-dots"></i> Special Requirements / Preferences</label>
+                            <textarea id="bookNotes" rows="3" placeholder="Dietary instructions, special resort requests, celebration cakes..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit-full" id="btnSubmitBooking">
+                            <span class="btn-txt">Submit Enquiry</span>
+                            <div class="btn-loader" style="display: none;"><i class="fas fa-spinner fa-spin"></i></div>
+                        </button>
+                    </form>
+
+                    <!-- Success State Notice -->
+                    <div id="formSuccessNotice" class="form-success-box text-center" style="display: none;">
+                        <i class="fas fa-check-circle success-icon"></i>
+                        <h4>Inquiry Received Successfully!</h4>
+                        <p>An authorized Island Operations Executive will reach out to <strong id="outEmail"></strong> shortly with tailored voucher options.</p>
+                        <button class="btn btn-secondary mt-small" id="btnResetForm">Plan Another Request</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ ACCORDION SECTION -->
+    <section id="faq" class="faq-section py-section">
+        <div class="section-container">
+            <div class="section-header reveal-up text-center">
+                <span class="subtitle-pill">Clarify Queries</span>
+                <h2>Frequently Asked <span class="gradient-text">Questions</span></h2>
+                <p>Everything you need to know about traveling to the Andaman & Nicobar archipelago safely and luxuriously.</p>
+            </div>
+
+            <div class="faq-accordion reveal-up">
+                <!-- FAQ 1 -->
+                <div class="faq-item active">
+                    <button class="faq-question" aria-expanded="true">
+                        <span>What are the permit rules for Indian and international travelers?</span>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer" style="max-height: 200px;">
+                        <p>Indian citizens do not require any restricted area permits to visit Port Blair, Havelock, or Neil Island. Foreign nationals are issued Restricted Area Permits (RAP) free of charge directly upon arrival at Veer Savarkar Airport, granting authorization for up to 30 days.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What is the optimal time frame to visit for calm seas and perfect sun?</span>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The premium touring peak stretches from October to May. During these months, the waters are glassy, flat, and feature peak underwater visibility for scuba diving. Monsoons (June to September) offer dramatic tropical rains but trigger choppy transit seas.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>How do mobile networks and internet perform across remote islands?</span>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Since the activation of the submarine optical fiber cable from Chennai, mobile speeds have significantly improved. Airtel, Jio, and BSNL 4G run reliably across Port Blair and Havelock. Premium resort partners offer complementary high-speed Wi-Fi linkages.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Are the luxury cab fleets available for direct outstation day bookings?</span>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! You can reserve premium VIP sedans (BMW, Audi) or SUVs (Scorpio, Innova) via our real-time Cab Estimator panel above for point-to-point drop-offs or dedicated round-trip multiday packages accompanied by highly verified local drivers.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Is it safe to participate in Scuba Diving if I am a pure non-swimmer?</span>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, 100% safe. Discover Scuba Diving (DSD) programs are crafted exclusively for absolute non-swimmers. A dedicated PADI divemaster controls your breathing set and propulsion manually underwater while you focus completely on enjoying the incredible view.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION / FOOTER -->
+    <footer id="contact" class="footer-section bg-dark-deep text-white">
+        <!-- Main Contact Row -->
+        <div class="section-container footer-top py-section">
+            <div class="footer-grid">
+                <!-- Info block -->
+                <div class="footer-col brand-col reveal-up">
+                    <div class="footer-logo">
+                        <span class="logo-icon text-orange"><img src="logo.jpeg" alt="Logo" class="footer-logo"></span>
+                        <span class="logo-title-foot">ANDAMAN <span class="gradient-text">LUXURY</span></span>
+                    </div>
+                    <p class="footer-brand-desc">Curating peerless coastal stays, thrilling oceanic ventures, and elite luxury private fleet rides across South Asia's most mesmerizing archipelago.</p>
+                    
+                    <div class="contact-methods mt-small">
+                        <p><i class="fas fa-phone-alt text-orange"></i> <strong>Hotline:</strong> +91 99332 16863 / +91 86175 25679</p>
+                        <p><i class="fas fa-envelope text-blue"></i> <strong>Email:</strong> reserve@andamanluxurytours.example.com</p>
+                        <p><i class="fas fa-map-marker-alt text-sand"></i> <strong>HQ Office:</strong> VIP Road, Port Blair, South Andaman - 744103</p>
+                        <p><i class="fas fa-clock text-orange"></i> <strong>Working Days:</strong> All Days (9:00 AM - 8:00 PM)</p>
+                        <p><i class="fas fa-certificate text-sand"></i> <strong>Authority Tag:</strong> UDYAM REGISTRATION NUMBER { UDYAM-AN-01-0011094 }</p>
+                    </div>
+
+                    <div class="social-icons mt-medium">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick links -->
+                <div class="footer-col links-col reveal-up" style="transition-delay: 0.1s;">
+                    <h4>Explore Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home Overview</a></li>
+                        <li><a href="islands.html">Popular Islands</a></li>
+                        <li><a href="beaches.html">Sunkissed Beaches</a></li>
+                        <li><a href="activities.html">Water Sports</a></li>
+                        <li><a href="history.html">Heritage Trails</a></li>
+                        <li><a href="packages.html">Tour Packages</a></li>
+                        <li><a href="honeymoon.html">Honeymoon Offers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Secondary links -->
+                <div class="footer-col links-col reveal-up" style="transition-delay: 0.2s;">
+                    <h4>Premium Services</h4>
+                    <ul>
+                        <li><a href="tours.html">Ferry Connections</a></li>
+                        <li><a href="cabs.html">BMW & VIP Rentals</a></li>
+                        <li><a href="cabs.html">SUV Route Estimator</a></li>
+                        <li><a href="gallery.html">Masonry Lightbox</a></li>
+                        <li><a href="index.html#faq">Permit Guide FAQ</a></li>
+                        <li><a href="booking.html">Instant Enquiry</a></li>
+                    </ul>
+                </div>
+
+                <!-- Map placeholder & Subscribe -->
+                <div class="footer-col map-col reveal-up" style="transition-delay: 0.3s;">
+                    <h4>Interactive Operations Map</h4>
+                    <div class="map-placeholder">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125345.96102146985!2d92.65151525!3d11.6666114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3088946c59b6c0e5%3A0x8684bb6a30eb6a00!2sPort%20Blair%2C%20Andaman%20and%20Nicobar%20Islands!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="150" 
+                            style="border:0; border-radius: 8px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Port Blair Regional Google Map">
+                        </iframe>
+                        <span class="map-caption"><i class="fas fa-location-arrow"></i> Real-time Fleet tracking enabled</span>
+                    </div>
+
+                    <!-- Newsletter inline Form -->
+                    <div class="newsletter-box mt-small">
+                        <span>Subscribe to Secret VIP Voucher drops:</span>
+                        <form id="newsletterForm" class="news-form mt-mini">
+                            <input type="email" placeholder="Enter email..." required>
+                            <button type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Legal bar -->
+        <div class="footer-bottom">
+            <div class="section-container bottom-bar-container">
+                <p>&copy; 2026 Andaman Luxury Escapes. Designed with rich modern aesthetics using pure HTML, CSS, and JS.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Code</a>
+                    <a href="#">Terms of Voyage</a>
+                    <a href="#">Refund Protocol</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

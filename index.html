@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andaman & Nicobar Islands | Premium Luxury Travel & Tours</title>
+    <meta name="description" content="Discover paradise in Andaman & Nicobar Islands. Experience tropical luxury, mesmerizing beaches, thrilling adventure activities, and premium car rentals.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="loader-content">
+            <div class="waves-loader"></div>
+            <span class="loader-text">Loading Paradise...</span>
+        </div>
+    </div>
+
+    <!-- Floating Action Buttons -->
+    <a href="https://wa.me/919933216863" target="_blank" class="floating-btn whatsapp-btn" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <button id="backToTop" class="floating-btn back-top-btn" aria-label="Scroll back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Transparent Sticky Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+               <span class="logo-icon">
+    <img src="logo.jpeg" alt="Logo" class="custom-logo">
+</span>
+            </a>
+            
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="islands.html" class="nav-link">Islands</a>
+                <a href="beaches.html" class="nav-link">Beaches</a>
+                <a href="activities.html" class="nav-link">Activities</a>
+                <a href="history.html" class="nav-link">History</a>
+                <a href="packages.html" class="nav-link">Packages</a>
+                <a href="honeymoon.html" class="nav-link">Honeymoon</a>
+                <a href="tours.html" class="nav-link">Tours</a>
+                <a href="cabs.html" class="nav-link">Cab Rentals</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="booking.html" class="nav-link btn-nav">Plan Trip</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="hero-section">
+        <!-- Video Background Placeholder -->
+        <div class="video-wrapper">
+            <video autoplay muted loop playsinline class="hero-video" id="heroVideo" poster="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&auto=format&fit=crop&q=80">
+                <!-- Using a high quality open source nature/ocean stock video -->
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-a-beautiful-tropical-beach-4158-large.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-particles" id="particles"></div>
+        </div>
+
+        <div class="hero-content">
+            <span class="welcome-badge reveal-fade">Premium Island Experience</span>
+            <h1 class="hero-title reveal-fade">Discover Paradise in <span class="gradient-text">Andaman</span></h1>
+            <div class="hero-logo">
+                <img src="logo.jpeg" alt="">
+            </div>
+            <p class="hero-subtitle reveal-fade">Immerse yourself in crystal-clear azure waters, pristine white-sand beaches, vibrant coral reefs, and unblemished tropical luxury.</p>
+            
+            <div class="hero-ctas reveal-fade">
+                <a href="#islands" class="btn btn-primary"><i class="fas fa-compass"></i> Explore Islands</a>
+                <a href="booking.html" class="btn btn-secondary" data-enquiry-trigger><i class="fas fa-paper-plane"></i> Enquiry Now</a>
+            </div>
+        </div>
+
+        <!-- Animated Floating Wave & Smooth Scroll Indicator -->
+        <div class="wave-container">
+            <svg class="hero-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,149.3C672,149,768,203,864,224C960,245,1056,235,1152,202.7C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+
+        <a href="#stats" class="scroll-indicator" aria-label="Scroll down">
+            <span class="mouse">
+                <span class="wheel"></span>
+            </span>
+            <span class="scroll-text">Scroll to explore</span>
+        </a>
+    </section>
+
+    <!-- Animated Counters / Quick Stats Section -->
+    <section id="stats" class="stats-section">
+        <div class="section-container stats-grid">
+            <div class="stat-item reveal-scale">
+                <div class="stat-icon"><i class="fas fa-map-marked-alt"></i></div>
+                <h3 class="stat-number" data-target="572">0</h3>
+                <p class="stat-label">Gorgeous Islands</p>
+            </div>
+            <div class="stat-item reveal-scale">
+                <div class="stat-icon"><i class="fas fa-umbrella-beach"></i></div>
+                <h3 class="stat-number" data-target="45">0</h3>
+                <p class="stat-label">Pristine Beaches</p>
+            </div>
+            <div class="stat-item reveal-scale">
+                <div class="stat-icon"><i class="fas fa-swimmer"></i></div>
+                <h3 class="stat-number" data-target="25">0</h3>
+                <p class="stat-label">Water Adventures</p>
+            </div>
+            <div class="stat-item reveal-scale">
+                <div class="stat-icon"><i class="fas fa-smile-beam"></i></div>
+                <h3 class="stat-number" data-target="15000">0</h3>
+                <h3 class="stat-suffix">+</h3>
+                <p class="stat-label">Happy Travelers</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. POPULAR ISLANDS SECTION -->
+    <section id="islands" class="islands-section py-section bg-gradient-subtle">
+        <div class="section-container">
+            <div class="section-header reveal-up">
+                <span class="subtitle-pill">Tropical Crown Jewels</span>
+                <h2>Popular <span class="gradient-text">Islands</span> to Visit</h2>
+                <p>Explore the diverse landscapes, untouched jungles, and legendary azure waters of the archipelago's most acclaimed destinations.</p>
+            </div>
+
+            <div class="islands-grid">
+                <!-- Island Card 1 -->
+                <div class="island-card reveal-up">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1589309736404-2e142a2acdf0?w=600&auto=format&fit=crop&q=80" alt="Port Blair" loading="lazy">
+                        <div class="rating-badge"><i class="fas fa-star"></i> 4.8</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Port Blair</h3>
+                        <p>The vibrant capital city full of historical monuments, coastal pathways, and lively local markets.</p>
+                        <div class="card-activities">
+                            <span><i class="fas fa-ship"></i> Museums</span>
+                            <span><i class="fas fa-shopping-bag"></i> Shopping</span>
+                            <span><i class="fas fa-utensils"></i> Seafood</span>
+                        </div>
+                        <a href="booking.html" class="btn-explore" data-enquiry-trigger>Enquiry Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Island Card 2 -->
+                <div class="island-card reveal-up" style="transition-delay: 0.1s;">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&auto=format&fit=crop&q=80" alt="Havelock Island" loading="lazy">
+                        <div class="rating-badge"><i class="fas fa-star"></i> 5.0</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Havelock Island (Swaraj Dweep)</h3>
+                        <p>World-renowned for unmatched coral vistas, premium luxury resorts, and iconic silken white sands.</p>
+                        <div class="card-activities">
+                            <span><i class="fas fa-water"></i> Scuba</span>
+                            <span><i class="fas fa-spa"></i> Luxury Spa</span>
+                            <span><i class="fas fa-cocktail"></i> Nightlife</span>
+                        </div>
+                        <a href="booking.html" class="btn-explore" data-enquiry-trigger>Enquiry Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Island Card 3 -->
+                <div class="island-card reveal-up" style="transition-delay: 0.2s;">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&auto=format&fit=crop&q=80" alt="Neil Island" loading="lazy">
+                        <div class="rating-badge"><i class="fas fa-star"></i> 4.9</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Neil Island (Shaheed Dweep)</h3>
+                        <p>A tranquil eco-friendly paradise celebrated for organic farms, breathtaking natural rock bridges, and serene sunsets.</p>
+                        <div class="card-activities">
+                            <span><i class="fas fa-bicycle"></i> Cycling</span>
+                            <span><i class="fas fa-camera"></i> Photography</span>
+                            <span><i class="fas fa-fish"></i> Snorkeling</span>
+                        </div>
+                        <a href="booking.html" class="btn-explore" data-enquiry-trigger>Enquiry Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Island Card 4 -->
+                <div class="island-card reveal-up" style="transition-delay: 0.3s;">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&auto=format&fit=crop&q=80" alt="Ross Island" loading="lazy">
+                        <div class="rating-badge"><i class="fas fa-star"></i> 4.7</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Ross Island (Netaji Subhash Chandra Bose Dweep)</h3>
+                        <p>Step back in time to explore Victorian ruins embraced by giant banyan roots and friendly friendly wild deer.</p>
+                        <div class="card-activities">
+                            <span><i class="fas fa-landmark"></i> Ruins</span>
+                            <span><i class="fas fa-paw"></i> Wildlife</span>
+                            <span><i class="fas fa-lightbulb"></i> Sound & Light</span>
+                        </div>
+                        <a href="booking.html" class="btn-explore" data-enquiry-trigger>Enquiry Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Island Card 5 -->
+                <div class="island-card reveal-up">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=600&auto=format&fit=crop&q=80" alt="Baratang Island" loading="lazy">
+                        <div class="rating-badge"><i class="fas fa-star"></i> 4.6</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Baratang Island</h3>
+                        <p>A wild frontier adventure featuring dense mangrove creeks, active mud volcanoes, and magnificent limestone caves.</p>
+                        <div class="card-activities">
+                            <span><i class="fas fa-mountain"></i> Volcanoes</span>
+                            <span><i class="fas fa-anchor"></i> Boat Safari</span>
+                            <span><i class="fas fa-leaf"></i> Mangroves</span>
+                        </div>
+                        <a href="booking.html" class="btn-explore" data-enquiry-trigger>Enquiry Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Island Card 6 -->
+                <div class="island-card reveal-up" style="transition-delay: 0.1s;">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=600&auto=format&fit=crop&q=80" alt="Cinque Island" loading="lazy">
+                        <div class="rating-badge"><i class="fas fa-star"></i> 4.9</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Cinque Island</h3>
+                        <p>An exquisite marine sanctuary divided by a gorgeous sandbar, famed for unmatched emerald diving waters.</p>
+                        <div class="card-activities">
+                            <span><i class="fas fa-swimming-pool"></i> Diving</span>
+                            <span><i class="fas fa-binoculars"></i> Secluded</span>
+                            <span><i class="fas fa-sun"></i> Sunbathing</span>
+                        </div>
+                        <a href="booking.html" class="btn-explore" data-enquiry-trigger>Enquiry Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Island Card 7 -->
+                <div class="island-card reveal-up" style="transition-delay: 0.2s;">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&auto=format&fit=crop&q=80" alt="North Bay Island" loading="lazy">
+                        <div class="rating-badge"><i class="fas fa-star"></i> 4.8</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>North Bay Island</h3>
+                        <p>The legendary hub of aquatic sports immortalized on the Indian currency note, full of vibrant live corals.</p>
+                        <div class="card-activities">
+                            <span><i class="fas fa-walking"></i> Sea Walk</span>
+                            <span><i class="fas fa-water"></i> Snorkeling</span>
+                            <span><i class="fas fa-tint"></i> Semi Submarine</span>
+                        </div>
+                        <a href="booking.html" class="btn-explore" data-enquiry-trigger>Enquiry Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Island Card 8 -->
+                <div class="island-card reveal-up" style="transition-delay: 0.3s;">
+                    <div class="card-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=600&auto=format&fit=crop&q=80" alt="Long Island" loading="lazy">
+                        <div class="rating-badge"><i class="fas fa-star"></i> 4.7</div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Long Island</h3>
+                        <p>A pristine offbeat oasis perfect for peaceful escapes, coastal trekking, and exploring absolute isolated shores.</p>
+                        <div class="card-activities">
+                            <span><i class="fas fa-hiking"></i> Trekking</span>
+                            <span><i class="fas fa-campground"></i> Camping</span>
+                            <span><i class="fas fa-dove"></i> Relaxation</span>
+                        </div>
+                        <a href="booking.html" class="btn-explore" data-enquiry-trigger>Enquiry Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. FAMOUS BEACHES SECTION -->
+    <section id="beaches" class="beaches-section py-section">
+        <div class="section-container">
+            <div class="section-header reveal-up">
+                <span class="subtitle-pill">Sunkissed Shores</span>
+                <h2>Famous <span class="gradient-text">Beaches</span> of Andaman</h2>
+                <p>From Asia's best-rated beaches to quiet coastal gems perfect for sunset chasing, discover your personal slice of golden bliss.</p>
+            </div>
+
+            <!-- Category filter buttons for interactive feel -->
+            <div class="filter-container reveal-up">
+                <button class="filter-btn active" data-filter="all">All Beaches</button>
+                <button class="filter-btn" data-filter="sunset">Best Sunsets</button>
+                <button class="filter-btn" data-filter="watersports">Water Sports</button>
+                <button class="filter-btn" data-filter="secluded">Secluded & Calm</button>
+            </div>
+
+            <div class="beaches-grid">
+                <!-- Beach 1 -->
+                <div class="beach-card reveal-up" data-category="sunset">
+                    <div class="beach-img">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop&q=80" alt="Radhanagar Beach" loading="lazy">
+                        <span class="badge-premium">Voted #1 in Asia</span>
+                    </div>
+                    <div class="beach-details">
+                        <div class="beach-title-row">
+                            <h4>Radhanagar Beach</h4>
+                            <span class="stars"><i class="fas fa-star"></i> 5.0</span>
+                        </div>
+                        <p class="beach-loc"><i class="fas fa-map-marker-alt"></i> Havelock Island</p>
+                        <p class="beach-desc">Lush green forest fringes meeting pristine white sands and incredibly clean turquoise water.</p>
+                        <div class="beach-icons">
+                            <span title="Swimming Allowed"><i class="fas fa-swimmer"></i></span>
+                            <span title="Spectacular Sunset"><i class="fas fa-sun"></i></span>
+                            <span title="Eateries Nearby"><i class="fas fa-utensils"></i></span>
+                        </div>
+                        <a href="booking.html" class="btn-text" data-enquiry-trigger>Enquiry Now &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Beach 2 -->
+                <div class="beach-card reveal-up" data-category="watersports">
+                    <div class="beach-img">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=500&auto=format&fit=crop&q=80" alt="Elephant Beach" loading="lazy">
+                    </div>
+                    <div class="beach-details">
+                        <div class="beach-title-row">
+                            <h4>Elephant Beach</h4>
+                            <span class="stars"><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                        <p class="beach-loc"><i class="fas fa-map-marker-alt"></i> Havelock Island</p>
+                        <p class="beach-desc">The ultimate adventure gateway offering shallow waters teeming with lively soft and hard corals.</p>
+                        <div class="beach-icons">
+                            <span title="Snorkeling"><i class="fas fa-water"></i></span>
+                            <span title="Sea Walking"><i class="fas fa-walking"></i></span>
+                            <span title="Speed Boats"><i class="fas fa-ship"></i></span>
+                        </div>
+                        <a href="booking.html" class="btn-text" data-enquiry-trigger>Enquiry Now &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Beach 3 -->
+                <div class="beach-card reveal-up" data-category="sunset">
+                    <div class="beach-img">
+                        <img src="https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=500&auto=format&fit=crop&q=80" alt="Kala Pathar Beach" loading="lazy">
+                    </div>
+                    <div class="beach-details">
+                        <div class="beach-title-row">
+                            <h4>Kala Pathar Beach</h4>
+                            <span class="stars"><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                        <p class="beach-loc"><i class="fas fa-map-marker-alt"></i> Havelock Island</p>
+                        <p class="beach-desc">Named after striking black rocks strewn across golden sand. Incredible backdrop for photoshoots.</p>
+                        <div class="beach-icons">
+                            <span title="Photography"><i class="fas fa-camera"></i></span>
+                            <span title="Sunrise views"><i class="fas fa-sun"></i></span>
+                            <span title="Quiet walks"><i class="fas fa-shoe-prints"></i></span>
+                        </div>
+                        <a href="booking.html" class="btn-text" data-enquiry-trigger>Enquiry Now &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Beach 4 -->
+                <div class="beach-card reveal-up" data-category="sunset">
+                    <div class="beach-img">
+                        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=500&auto=format&fit=crop&q=80" alt="Laxmanpur Beach" loading="lazy">
+                    </div>
+                    <div class="beach-details">
+                        <div class="beach-title-row">
+                            <h4>Laxmanpur Beach</h4>
+                            <span class="stars"><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                        <p class="beach-loc"><i class="fas fa-map-marker-alt"></i> Neil Island</p>
+                        <p class="beach-desc">Broad sweeping coast famous for dramatic crimson sunsets and live shallow tide pools.</p>
+                        <div class="beach-icons">
+                            <span title="Magnificent Sunset"><i class="fas fa-sun"></i></span>
+                            <span title="Beach Combing"><i class="fas fa-search"></i></span>
+                            <span title="Romantic Vibe"><i class="fas fa-heart"></i></span>
+                        </div>
+                        <a href="booking.html" class="btn-text" data-enquiry-trigger>Enquiry Now &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Beach 5 -->
+                <div class="beach-card reveal-up" data-category="watersports">
+                    <div class="beach-img">
+                        <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=500&auto=format&fit=crop&q=80" alt="Bharatpur Beach" loading="lazy">
+                    </div>
+                    <div class="beach-details">
+                        <div class="beach-title-row">
+                            <h4>Bharatpur Beach</h4>
+                            <span class="stars"><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                        <p class="beach-loc"><i class="fas fa-map-marker-alt"></i> Neil Island</p>
+                        <p class="beach-desc">The only beach in Neil where extensive motorized water sports and clear glass-bottom rides operate.</p>
+                        <div class="beach-icons">
+                            <span title="Glass Bottom Boat"><i class="fas fa-eye"></i></span>
+                            <span title="Jet Ski"><i class="fas fa-tachometer-alt"></i></span>
+                            <span title="Swimming"><i class="fas fa-swimmer"></i></span>
+                        </div>
+                        <a href="booking.html" class="btn-text" data-enquiry-trigger>Enquiry Now &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Beach 6 -->
+                <div class="beach-card reveal-up" data-category="secluded">
+                    <div class="beach-img">
+                        <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=500&auto=format&fit=crop&q=80" alt="Sitapur Beach" loading="lazy">
+                    </div>
+                    <div class="beach-details">
+                        <div class="beach-title-row">
+                            <h4>Sitapur Beach</h4>
+                            <span class="stars"><i class="fas fa-star"></i> 4.6</span>
+                        </div>
+                        <p class="beach-loc"><i class="fas fa-map-marker-alt"></i> Neil Island</p>
+                        <p class="beach-desc">Known locally as the "Sunrise Beach", backed by high limestone formations and lush foliage.</p>
+                        <div class="beach-icons">
+                            <span title="Splendid Sunrise"><i class="fas fa-sun"></i></span>
+                            <span title="Trekking Trails"><i class="fas fa-hiking"></i></span>
+                            <span title="Calm Retreat"><i class="fas fa-spa"></i></span>
+                        </div>
+                        <a href="booking.html" class="btn-text" data-enquiry-trigger>Enquiry Now &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Beach 7 -->
+                <div class="beach-card reveal-up" data-category="watersports">
+                    <div class="beach-img">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&auto=format&fit=crop&q=80" alt="Corbyn's Cove Beach" loading="lazy">
+                    </div>
+                    <div class="beach-details">
+                        <div class="beach-title-row">
+                            <h4>Corbyn's Cove Beach</h4>
+                            <span class="stars"><i class="fas fa-star"></i> 4.5</span>
+                        </div>
+                        <p class="beach-loc"><i class="fas fa-map-marker-alt"></i> Port Blair</p>
+                        <p class="beach-desc">The closest beach to Port Blair center, encircled by swaying coconut palms and seaside cafes.</p>
+                        <div class="beach-icons">
+                            <span title="Jet Ski"><i class="fas fa-water"></i></span>
+                            <span title="Speedboat"><i class="fas fa-ship"></i></span>
+                            <span title="Cafes"><i class="fas fa-coffee"></i></span>
+                        </div>
+                        <a href="booking.html" class="btn-text" data-enquiry-trigger>Enquiry Now &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Beach 8 -->
+                <div class="beach-card reveal-up" data-category="secluded">
+                    <div class="beach-img">
+                        <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=500&auto=format&fit=crop&q=80" alt="Wandoor Beach" loading="lazy">
+                    </div>
+                    <div class="beach-details">
+                        <div class="beach-title-row">
+                            <h4>Wandoor Beach</h4>
+                            <span class="stars"><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                        <p class="beach-loc"><i class="fas fa-map-marker-alt"></i> Port Blair</p>
+                        <p class="beach-desc">Gateway to Mahatma Gandhi Marine National Park. Stunning views of neighboring mangrove islands.</p>
+                        <div class="beach-icons">
+                            <span title="Marine Park"><i class="fas fa-fish"></i></span>
+                            <span title="Nature Walks"><i class="fas fa-tree"></i></span>
+                            <span title="Photography"><i class="fas fa-camera"></i></span>
+                        </div>
+                        <a href="booking.html" class="btn-text" data-enquiry-trigger>Enquiry Now &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Beach 9 -->
+                <div class="beach-card reveal-up" data-category="secluded">
+                    <div class="beach-img">
+                        <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?w=500&auto=format&fit=crop&q=80" alt="Merk Bay Beach" loading="lazy">
+                    </div>
+                    <div class="beach-details">
+                        <div class="beach-title-row">
+                            <h4>Merk Bay Beach</h4>
+                            <span class="stars"><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                        <p class="beach-loc"><i class="fas fa-map-marker-alt"></i> North Passage Island</p>
+                        <p class="beach-desc">Accessible only via charted boats, offering dolphin sightings and completely untouched white sandbanks.</p>
+                        <div class="beach-icons">
+                            <span title="Dolphin Sighting"><i class="fas fa-water"></i></span>
+                            <span title="Absolute Privacy"><i class="fas fa-user-secret"></i></span>
+                            <span title="Snorkeling"><i class="fas fa-swimmer"></i></span>
+                        </div>
+                        <a href="booking.html" class="btn-text" data-enquiry-trigger>Enquiry Now &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Beach 10 -->
+                <div class="beach-card reveal-up" data-category="watersports">
+                    <div class="beach-img">
+                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=500&auto=format&fit=crop&q=80" alt="Butler Bay Beach" loading="lazy">
+                    </div>
+                    <div class="beach-details">
+                        <div class="beach-title-row">
+                            <h4>Butler Bay Beach</h4>
+                            <span class="stars"><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                        <p class="beach-loc"><i class="fas fa-map-marker-alt"></i> Little Andaman</p>
+                        <p class="beach-desc">Famous as one of India's best surfing destinations featuring rolling breakers and yellow sandstone shores.</p>
+                        <div class="beach-icons">
+                            <span title="Surfing"><i class="fas fa-water"></i></span>
+                            <span title="Waterfall trekking"><i class="fas fa-hiking"></i></span>
+                            <span title="Elephants"><i class="fas fa-paw"></i></span>
+                        </div>
+                        <a href="booking.html" class="btn-text" data-enquiry-trigger>Enquiry Now &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. CONTACT SECTION / FOOTER -->
+    <footer id="contact" class="footer-section bg-dark-deep text-white">
+        <!-- Main Contact Row -->
+        <div class="section-container footer-top py-section">
+            <div class="footer-grid">
+                <!-- Info block -->
+                <div class="footer-col brand-col reveal-up">
+                    <div class="footer-logo">
+                        <span class="logo-icon text-orange"><img src="logo.jpeg" alt="Logo" class="footer-logo"></span>
+                        <span class="logo-title-foot">ANDAMAN <span class="gradient-text">LUXURY</span></span>
+                    </div>
+                    <p class="footer-brand-desc">Curating peerless coastal stays, thrilling oceanic ventures, and elite luxury private fleet rides across South Asia's most mesmerizing archipelago.</p>
+                    
+                    <div class="contact-methods mt-small">
+                        <p><i class="fas fa-phone-alt text-orange"></i> <strong>Hotline:</strong> +91 99332 16863 / +91 86175 25679</p>
+                        <p><i class="fas fa-envelope text-blue"></i> <strong>Email:</strong> reserve@andamanluxurytours.example.com</p>
+                        <p><i class="fas fa-map-marker-alt text-sand"></i> <strong>HQ Office:</strong> VIP Road, Port Blair, South Andaman - 744103</p>
+                        <p><i class="fas fa-clock text-orange"></i> <strong>Working Days:</strong> All Days (9:00 AM - 8:00 PM)</p>
+                        <p><i class="fas fa-certificate text-sand"></i> <strong>Authority Tag:</strong> UDYAM REGISTRATION NUMBER { UDYAM-AN-01-0011094 }</p>
+                    </div>
+
+                    <div class="social-icons mt-medium">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick links -->
+                <div class="footer-col links-col reveal-up" style="transition-delay: 0.1s;">
+                    <h4>Explore Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home Overview</a></li>
+                        <li><a href="islands.html">Popular Islands</a></li>
+                        <li><a href="beaches.html">Sunkissed Beaches</a></li>
+                        <li><a href="activities.html">Water Sports</a></li>
+                        <li><a href="history.html">Heritage Trails</a></li>
+                        <li><a href="packages.html">Tour Packages</a></li>
+                        <li><a href="honeymoon.html">Honeymoon Offers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Secondary links -->
+                <div class="footer-col links-col reveal-up" style="transition-delay: 0.2s;">
+                    <h4>Premium Services</h4>
+                    <ul>
+                        <li><a href="tours.html">Ferry Connections</a></li>
+                        <li><a href="cabs.html">BMW & VIP Rentals</a></li>
+                        <li><a href="cabs.html">SUV Route Estimator</a></li>
+                        <li><a href="gallery.html">Masonry Lightbox</a></li>
+                        <li><a href="booking.html">Instant Enquiry</a></li>
+                    </ul>
+                </div>
+
+                <!-- Map placeholder & Subscribe -->
+                <div class="footer-col map-col reveal-up" style="transition-delay: 0.3s;">
+                    <h4>Interactive Operations Map</h4>
+                    <!-- Interactive map wrapper placeholder simulating high fidelity view -->
+                    <div class="map-placeholder">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125345.96102146985!2d92.65151525!3d11.6666114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3088946c59b6c0e5%3A0x8684bb6a30eb6a00!2sPort%20Blair%2C%20Andaman%20and%20Nicobar%20Islands!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="150" 
+                            style="border:0; border-radius: 8px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Port Blair Regional Google Map">
+                        </iframe>
+                        <span class="map-caption"><i class="fas fa-location-arrow"></i> Real-time Fleet tracking enabled</span>
+                    </div>
+
+                    <!-- Newsletter inline Form -->
+                    <div class="newsletter-box mt-small">
+                        <span>Subscribe to Secret VIP Voucher drops:</span>
+                        <form id="newsletterForm" class="news-form mt-mini">
+                            <input type="email" placeholder="Enter email..." required>
+                            <button type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Legal bar -->
+        <div class="footer-bottom">
+            <div class="section-container bottom-bar-container">
+                <p>&copy; 2026 Andaman Luxury Escapes. Designed with rich modern aesthetics using pure HTML, CSS, and JS.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Code</a>
+                    <a href="#">Terms of Voyage</a>
+                    <a href="#">Refund Protocol</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
