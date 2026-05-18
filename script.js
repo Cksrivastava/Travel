@@ -322,8 +322,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const vehicleMultipliers = {
         scorpio: { mult: 1.0, label: 'Mahindra Scorpio SUV' },
         innova: { mult: 1.25, label: 'Toyota Innova Crysta' },
-        audi: { mult: 1.8, label: 'Audi Premium Sedan' },
-        bmw: { mult: 2.5, label: 'BMW VIP Cruiser' }
+        swift: { mult: 0.72, label: 'Maruti Suzuki Swift' },
+        i10: { mult: 0.7, label: 'Hyundai Grand i10 Nios' },
+        wagonr: { mult: 0.68, label: 'Maruti Suzuki Wagon R' },
+        tiago: { mult: 0.68, label: 'Tata Tiago' }
     };
 
     const calcOrigin = document.getElementById('calcOrigin');
@@ -443,7 +445,33 @@ document.addEventListener('DOMContentLoaded', () => {
     // Run initial summary map
     updateLiveBookingSummary();
 
-    // Secure submission simulation logic
+    const WEB3FORMS_ACCESS_KEY = '8043e8d9-e6e8-469e-be4d-011e8c2a3710';
+
+    const submitToWeb3Forms = (fields) => {
+        const formData = new FormData();
+        formData.append('access_key', WEB3FORMS_ACCESS_KEY);
+        Object.entries(fields).forEach(([key, value]) => {
+            formData.append(key, value || 'Not provided');
+        });
+        if (fields.email && fields.email.includes('@')) {
+            formData.append('cc', fields.email);
+            formData.append('reply_to', fields.email);
+        }
+
+        return fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData,
+            headers: { Accept: 'application/json' }
+        }).then(response => {
+            if (!response.ok) throw new Error('Unable to send form');
+            return response.json();
+        }).then(data => {
+            if (!data.success) throw new Error(data.message || 'Unable to send form');
+            return data;
+        });
+    };
+
+    // Secure submission logic
     const tripBookingForm = document.getElementById('tripBookingForm');
     const formSuccessNotice = document.getElementById('formSuccessNotice');
     const outEmail = document.getElementById('outEmail');
@@ -457,28 +485,49 @@ document.addEventListener('DOMContentLoaded', () => {
             const btnTxt = btnSubmit?.querySelector('.btn-txt');
             const btnLoader = btnSubmit?.querySelector('.btn-loader');
             const userEmail = document.getElementById('bookEmail')?.value || 'Guest';
+            const bookName = document.getElementById('bookName')?.value?.trim() || 'Not provided';
+            const bookPhone = document.getElementById('bookPhone')?.value?.trim() || 'Not provided';
+            const bookDate = document.getElementById('bookDate')?.value || 'Not provided';
+            const bookDest = document.getElementById('bookDest')?.selectedOptions?.[0]?.text || 'Not provided';
+            const bookPackage = document.getElementById('bookPackage')?.selectedOptions?.[0]?.text || 'Not provided';
+            const includeCab = document.getElementById('chkIncludeCab')?.checked ? 'Yes' : 'No';
+            const bookNotes = document.getElementById('bookNotes')?.value?.trim() || 'No extra requirements provided';
 
             // Show loading animation state
             if (btnTxt && btnLoader) {
                 btnTxt.style.display = 'none';
                 btnLoader.style.display = 'inline-block';
             }
+            if (btnSubmit) btnSubmit.disabled = true;
 
-            // Simulate server POST verification response delay
-            setTimeout(() => {
+            submitToWeb3Forms({
+                subject: `New Plan Trip Enquiry - ${bookName}`,
+                form_type: 'Plan Trip / Secure Reservation',
+                name: bookName,
+                email: userEmail,
+                phone: bookPhone,
+                travel_start_date: bookDate,
+                destination: bookDest,
+                package_tier: bookPackage,
+                include_cab_preference: includeCab,
+                special_requirements: bookNotes,
+                page: window.location.href
+            }).then(() => {
                 tripBookingForm.style.display = 'none';
                 if (outEmail) outEmail.innerText = userEmail;
                 if (formSuccessNotice) {
                     formSuccessNotice.style.display = 'block';
                     formSuccessNotice.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
-
-                // Restore loader component fallback state
+            }).catch(() => {
+                alert('Unable to send enquiry right now. Please try again or contact us on WhatsApp.');
+            }).finally(() => {
                 if (btnTxt && btnLoader) {
                     btnTxt.style.display = 'inline-block';
                     btnLoader.style.display = 'none';
                 }
-            }, 1500);
+                if (btnSubmit) btnSubmit.disabled = false;
+            });
         });
     }
 
@@ -595,44 +644,45 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3 id="enquiryTitle"><i class="fas fa-paper-plane"></i> Enquiry Now</h3>
                     <p>Share your details and our team will contact you shortly.</p>
                 </div>
-                <form id="siteEnquiryForm" class="booking-form">
+                <form id="siteEnquiryForm" class="booking-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="8043e8d9-e6e8-469e-be4d-011e8c2a3710">
                     <div class="input-field-group">
                         <label for="enquiryName"><i class="fas fa-user"></i> Full Name *</label>
-                        <input type="text" id="enquiryName" placeholder="Enter your full name" required>
+                        <input type="text" id="enquiryName" name="name" placeholder="Enter your full name" required>
                     </div>
                     <div class="form-row-2">
                         <div class="input-field-group">
                             <label for="enquiryMobile"><i class="fas fa-phone-alt"></i> Mobile / WhatsApp *</label>
-                            <input type="tel" id="enquiryMobile" placeholder="+91 XXXXX XXXXX" required>
+                            <input type="tel" id="enquiryMobile" name="mobile" placeholder="+91 XXXXX XXXXX" required>
                         </div>
                         <div class="input-field-group">
                             <label for="enquiryEmail"><i class="fas fa-envelope"></i> Email Address *</label>
-                            <input type="email" id="enquiryEmail" placeholder="name@domain.com" required>
+                            <input type="email" id="enquiryEmail" name="email" placeholder="name@domain.com" required>
                         </div>
                     </div>
                     <div class="form-row-2">
                         <div class="input-field-group">
                             <label for="enquiryTravelDate"><i class="fas fa-calendar-day"></i> Travel Date</label>
-                            <input type="date" id="enquiryTravelDate">
+                            <input type="date" id="enquiryTravelDate" name="travel_date">
                         </div>
                         <div class="input-field-group">
                             <label for="enquiryGuests"><i class="fas fa-users"></i> No. of Travelers</label>
-                            <input type="number" id="enquiryGuests" min="1" placeholder="1">
+                            <input type="number" id="enquiryGuests" name="travelers" min="1" placeholder="1">
                         </div>
                     </div>
                     <div class="input-field-group">
                         <label for="enquiryInterest"><i class="fas fa-map-marked-alt"></i> Interested In</label>
-                        <input type="text" id="enquiryInterest" placeholder="Package, cab, activity, honeymoon..." readonly>
+                        <input type="text" id="enquiryInterest" name="interest" placeholder="Package, cab, activity, honeymoon..." readonly>
                     </div>
                     <div class="input-field-group">
                         <label for="enquiryMessage"><i class="fas fa-comment-dots"></i> Other Essential Details</label>
-                        <textarea id="enquiryMessage" rows="3" placeholder="Pickup city, hotel preference, special requirements..."></textarea>
+                        <textarea id="enquiryMessage" name="message" rows="3" placeholder="Pickup city, hotel preference, special requirements..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-submit-full">Submit Enquiry</button>
                 </form>
                 <div id="enquirySuccess" class="form-success-box text-center" style="display: none;">
                     <i class="fas fa-check-circle success-icon"></i>
-                    <h4>Enquiry Received Successfully!</h4>
+                    <h4>Enquiry Sent Successfully!</h4>
                     <p>Our team will contact you soon with the right details.</p>
                 </div>
             </div>
@@ -641,6 +691,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const getEnquiryContext = (trigger) => {
+        const explicitInterest = trigger?.getAttribute('data-enquiry-interest');
+        if (explicitInterest) return explicitInterest;
+
         if (trigger.id === 'btnBookRideFromCalc' && calcOrigin && calcDest && calcCar) {
             const originLabel = calcOrigin.options[calcOrigin.selectedIndex].text;
             const destLabel = calcDest.options[calcDest.selectedIndex].text;
@@ -697,8 +750,67 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('submit', (e) => {
         if (e.target?.id !== 'siteEnquiryForm') return;
         e.preventDefault();
-        e.target.style.display = 'none';
-        const success = document.getElementById('enquirySuccess');
-        if (success) success.style.display = 'block';
+        const name = document.getElementById('enquiryName')?.value?.trim() || 'Not provided';
+        const mobile = document.getElementById('enquiryMobile')?.value?.trim() || 'Not provided';
+        const email = document.getElementById('enquiryEmail')?.value?.trim() || 'Not provided';
+        const travelDate = document.getElementById('enquiryTravelDate')?.value || 'Not provided';
+        const guests = document.getElementById('enquiryGuests')?.value || 'Not provided';
+        const interest = document.getElementById('enquiryInterest')?.value?.trim() || 'General enquiry';
+        const message = document.getElementById('enquiryMessage')?.value?.trim() || 'No extra details provided';
+
+        const subject = `New Travel Enquiry - ${interest}`;
+        const body = [
+            'New enquiry received from the website:',
+            '',
+            `Name: ${name}`,
+            `Mobile / WhatsApp: ${mobile}`,
+            `Customer Email: ${email}`,
+            `Travel Date: ${travelDate}`,
+            `No. of Travelers: ${guests}`,
+            `Interested In: ${interest}`,
+            '',
+            'Other Essential Details:',
+            message,
+            '',
+            `Page: ${window.location.href}`
+        ].join('\n');
+
+        const submitButton = e.target.querySelector('button[type="submit"]');
+        if (submitButton) {
+            submitButton.disabled = true;
+            submitButton.innerText = 'Sending...';
+        }
+
+        submitToWeb3Forms({
+            subject,
+            form_type: 'Website Enquiry',
+            name,
+            mobile,
+            email,
+            travel_date: travelDate,
+            travelers: guests,
+            interest,
+            message,
+            full_details: body,
+            page: window.location.href
+        })
+            .then(() => {
+                e.target.style.display = 'none';
+                const success = document.getElementById('enquirySuccess');
+                if (success) {
+                    success.style.display = 'block';
+                    success.querySelector('h4').innerText = 'Enquiry Sent Successfully!';
+                    success.querySelector('p').innerText = 'Our team will contact you soon with the right details.';
+                }
+            })
+            .catch(() => {
+                alert('Unable to send enquiry right now. Please try again or contact us on WhatsApp.');
+            })
+            .finally(() => {
+                if (submitButton) {
+                    submitButton.disabled = false;
+                    submitButton.innerText = 'Submit Enquiry';
+                }
+            });
     });
 });

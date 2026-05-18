@@ -40,7 +40,7 @@
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
                 <span class="logo-icon">
-                    <img src="logo.jpeg" alt="Logo" class="custom-logo">
+                    <img src="image/logo.jpeg" alt="Logo" class="custom-logo">
                 </span>
             </a>
             
@@ -105,7 +105,8 @@
 
                 <!-- Modern Booking Form Glassmorphism design -->
                 <div class="booking-right glassmorphism-premium reveal-right">
-                    <form id="tripBookingForm" class="booking-form">
+                    <form id="tripBookingForm" class="booking-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="8043e8d9-e6e8-469e-be4d-011e8c2a3710">
                         <div class="form-header">
                             <h3><i class="fas fa-concierge-bell"></i> Secure Reservation</h3>
                             <p>Submit customized specs below</p>
@@ -113,28 +114,28 @@
 
                         <div class="input-field-group">
                             <label for="bookName"><i class="fas fa-user"></i> Full Name *</label>
-                            <input type="text" id="bookName" placeholder="Enter your full name" required>
+                            <input type="text" id="bookName" name="name" placeholder="Enter your full name" required>
                         </div>
 
                         <div class="input-field-group">
                             <label for="bookEmail"><i class="fas fa-envelope"></i> Email Address *</label>
-                            <input type="email" id="bookEmail" placeholder="name@domain.com" required>
+                            <input type="email" id="bookEmail" name="email" placeholder="name@domain.com" required>
                         </div>
 
                         <div class="form-row-2">
                             <div class="input-field-group">
                                 <label for="bookPhone"><i class="fas fa-phone-alt"></i> Mobile / WhatsApp *</label>
-                                <input type="tel" id="bookPhone" placeholder="+91 XXXXX XXXXX" required>
+                                <input type="tel" id="bookPhone" name="phone" placeholder="+91 XXXXX XXXXX" required>
                             </div>
                             <div class="input-field-group">
                                 <label for="bookDate"><i class="fas fa-calendar-day"></i> Travel Start Date *</label>
-                                <input type="date" id="bookDate" required>
+                                <input type="date" id="bookDate" name="travel_start_date" required>
                             </div>
                         </div>
 
                         <div class="input-field-group">
                             <label for="bookDest"><i class="fas fa-map-marked-alt"></i> Primary Focal Destination</label>
-                            <select id="bookDest" class="custom-select">
+                            <select id="bookDest" name="destination" class="custom-select">
                                 <option value="all">Comprehensive Andaman Showcase</option>
                                 <option value="havelock">Havelock & Neil Exclusively</option>
                                 <option value="honeymoon">Premium Sunset Honeymoon Itinerary</option>
@@ -145,7 +146,7 @@
 
                         <div class="input-field-group">
                             <label for="bookPackage"><i class="fas fa-box-open"></i> Select Desired Tier *</label>
-                            <select id="bookPackage" class="custom-select" required>
+                            <select id="bookPackage" name="package_tier" class="custom-select" required>
                                 <option value="45999" selected>Andaman Wonders Tour Package (5N/6D)</option>
                                 <option value="24999">Classic Island Discovery</option>
                                 <option value="54999">Havelock Romantic Bliss Bundle</option>
@@ -156,13 +157,13 @@
 
                         <!-- Addon inclusion option tied to feature list -->
                         <div class="checkbox-group">
-                            <input type="checkbox" id="chkIncludeCab" value="yes">
+                            <input type="checkbox" id="chkIncludeCab" name="include_cab_preference" value="yes">
                             <label for="chkIncludeCab">Include cab vehicle preference in primary itinerary enquiry</label>
                         </div>
 
                         <div class="input-field-group">
                             <label for="bookNotes"><i class="fas fa-comment-dots"></i> Special Requirements / Preferences</label>
-                            <textarea id="bookNotes" rows="3" placeholder="Dietary instructions, special resort requests, celebration cakes..."></textarea>
+                            <textarea id="bookNotes" name="message" rows="3" placeholder="Dietary instructions, special resort requests, celebration cakes..."></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-submit-full" id="btnSubmitBooking">
@@ -259,15 +260,15 @@
                 <!-- Info block -->
                 <div class="footer-col brand-col reveal-up">
                     <div class="footer-logo">
-                        <span class="logo-icon text-orange"><img src="logo.jpeg" alt="Logo" class="footer-logo"></span>
+                        <span class="logo-icon text-orange"><img src="image/logo.jpeg" alt="Logo" class="footer-logo"></span>
                         <span class="logo-title-foot">ANDAMAN <span class="gradient-text">LUXURY</span></span>
                     </div>
                     <p class="footer-brand-desc">Curating peerless coastal stays, thrilling oceanic ventures, and elite luxury private fleet rides across South Asia's most mesmerizing archipelago.</p>
                     
                     <div class="contact-methods mt-small">
-                        <p><i class="fas fa-phone-alt text-orange"></i> <strong>Hotline:</strong> +91 99332 16863 / +91 86175 25679</p>
-                        <p><i class="fas fa-envelope text-blue"></i> <strong>Email:</strong> reserve@andamanluxurytours.example.com</p>
-                        <p><i class="fas fa-map-marker-alt text-sand"></i> <strong>HQ Office:</strong> VIP Road, Port Blair, South Andaman - 744103</p>
+                        <p><i class="fas fa-phone-alt text-orange"></i> <strong>WhatsApp:</strong> +91 99332 16863 / +91 86175 25679</p>
+                        <p><i class="fas fa-envelope text-blue"></i> <strong>Email:</strong> himanshusrivastava714@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt text-sand"></i> <strong>HQ Office:</strong> Manarghat Paduck Bagicha, South Andaman, Andaman and Nicobar Islands, Sri Vijayapuram - 744206</p>
                         <p><i class="fas fa-clock text-orange"></i> <strong>Working Days:</strong> All Days (9:00 AM - 8:00 PM)</p>
                         <p><i class="fas fa-certificate text-sand"></i> <strong>Authority Tag:</strong> UDYAM REGISTRATION NUMBER { UDYAM-AN-01-0011094 }</p>
                     </div>
@@ -313,7 +314,7 @@
                     <h4>Interactive Operations Map</h4>
                     <div class="map-placeholder">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125345.96102146985!2d92.65151525!3d11.6666114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3088946c59b6c0e5%3A0x8684bb6a30eb6a00!2sPort%20Blair%2C%20Andaman%20and%20Nicobar%20Islands!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" 
+                            src="https://www.google.com/maps?q=Manarghat%20paduck%20bagicha%20South%20Andaman%20Andaman%20and%20Nicobar%20Islands%20Sri%20Vijayapuram%20744206&output=embed" 
                             width="100%" 
                             height="150" 
                             style="border:0; border-radius: 8px;" 
