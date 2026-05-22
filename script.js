@@ -22,31 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', hidePreloader);
     setTimeout(hidePreloader, 2000); // Fallback timeout guarantee
 
-    // --- 2. HERO CINEMATIC PARTICLES INJECTOR ---
-    const particlesContainer = document.getElementById('particles');
-    if (particlesContainer) {
-        const particleCount = 20;
-        for (let i = 0; i < particleCount; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-
-            // Randomize position, size, and animation timing
-            const size = Math.random() * 6 + 2;
-            const left = Math.random() * 100;
-            const top = Math.random() * 100;
-            const duration = Math.random() * 8 + 6;
-            const delay = Math.random() * 5;
-
-            particle.style.width = `${size}px`;
-            particle.style.height = `${size}px`;
-            particle.style.left = `${left}%`;
-            particle.style.top = `${top}%`;
-            particle.style.animationDuration = `${duration}s`;
-            particle.style.animationDelay = `${delay}s`;
-
-            particlesContainer.appendChild(particle);
-        }
-    }
 
     // --- 3. STICKY NAVBAR & SCROLL HIGHLIGHTS ---
     const navbar = document.getElementById('navbar');
